@@ -1,0 +1,248 @@
+body {
+  font-size: 16px;
+  width: 100%;
+  height: 100vh;
+}
+h2,
+.container {
+  color: #444;
+  max-width: 400px;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+h2 {
+  margin: 10px 0 20px;
+}
+
+#root,
+.App {
+  height: 100%;
+}
+.App {
+  padding-top: 50px;
+  background: #888;
+}
+.app-col {
+  background: rgba(255,255,255,0.8);
+  padding: 20px 30px;
+}
+
+.input-col .to-do-check-all {
+  width: 20px;
+  height: 20px;
+  margin: 6px 10px 0 0;
+  float: left;
+  cursor: pointer;
+}
+.input-col .to-do-check-all.anticon-down-circle-o::before {
+  font-size: 20px;
+}
+.input-col form {
+  float: left;
+  width: 85%;
+}
+.input-col .to-do-input {
+  height: 30px;
+  width: 90%;
+  text-align: center;
+  padding: 0;
+  border: 0;
+  -webkit-touch-callout: auto;
+  -webkit-user-select: auto;
+  -khtml-user-select: auto;
+  -moz-user-select: auto;
+  -ms-user-select: auto;
+  user-select: auto;
+}
+.input-col button {
+  float: right;
+  border: 1px solid #000;
+  background: none;
+  padding: 2px 0 0;
+  width: 30px;
+  height: 30px;
+}
+.input-col button.ant-btn-primary {
+  color: #000;
+}
+.input-col button.ant-btn-primary:hover,
+.input-col button.ant-btn-primary:focus,
+.input-col button.ant-btn-primary:active {
+  background: transparent;
+  color: #000;
+}
+
+.list-col {
+  padding-top: 15px;
+  min-height: 300px;
+  clear: both;
+}
+.list-col .show-active .to-do-list-item-completed {
+  display: none;
+}
+.list-col .show-completed .to-do-list-item-active {
+  display: none;
+}
+
+.list-col .to-do-list-item-mark {
+  border: 1px solid #444;
+  width: 20px;
+  height: 20px;
+  border-radius: 10px;
+  display: inline-block;
+  margin: 5px 10px 0 0;
+  position: relative;
+  top: 3px;
+  color: transparent;
+  cursor: pointer;
+  transition: .5s;
+}
+.list-col .to-do-list-item-completed .to-do-list-item-mark {
+  color: green;
+}
+.list-col .to-do-list-item-text {
+  position: relative;
+}
+.list-col .to-do-list-item-text,
+.list-col .to-do-list-item-input {
+  width: 230px;
+  transition: .2s;
+}
+.list-col .to-do-list-item-input {
+  position: absolute;
+  left: -2px;
+  bottom: -6px;
+  opacity: 0;
+  -webkit-touch-callout: auto;
+  -webkit-user-select: auto;
+  -khtml-user-select: auto;
+  -moz-user-select: auto;
+  -ms-user-select: auto;
+  user-select: auto;
+}
+.list-col .to-do-list-item-input.show-input {
+  opacity: 1;
+}
+.list-col .to-do-list-item-completed .to-do-list-item-text {
+  text-decoration: line-through;
+}
+.list-col .to-do-list-item-input {
+  position: absolute;
+}
+.list-col .to-do-list-item-mark .icon {
+  position: relative;
+  top: -2px;
+  left: 1px;
+}
+.list-col .to-do-list-item-edit,
+.list-col .to-do-list-item-del {
+  color: transparent;
+  float: right;
+  width: 20px;
+  height: 20px;
+  text-align: center;
+  position: relative;
+  top: 5px;
+  transition: .5s;
+  cursor: pointer;
+}
+.to-do-list-item:hover .to-do-list-item-edit,
+.to-do-list-item:hover .to-do-list-item-del {
+  color: #444;
+}
+.list-col .to-do-list-item-edit {
+  margin-right: 5px;
+  font-size: 17px;
+  top: 4px;
+  opacity: 1;
+  transition: .5s;
+  visibility: visible;
+}
+.list-col .to-do-list-item-edit.hide-edit {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.filter-col {
+  padding-top: 20px;
+}
+.filter-col .to-do-count {
+  margin-bottom: 10px;
+}
+.filter-col .to-do-edit-all,
+.filter-col .to-do-save-all,
+.filter-col .to-do-toggles {
+  cursor: pointer;
+}
+.filter-col .to-do-edit-all,
+.filter-col .to-do-save-all,
+.filter-col .to-do-toggles span {
+  transition: .2s;
+  padding: 5px 10px;
+}
+.filter-col .ant-btn {
+  font-size: 16px;
+  padding: 6px 15px 5px;
+  height: auto;
+  margin: 0 0 10px;
+  transition: .3s;
+  color: black;
+}
+.filter-col .ant-btn:hover,
+.filter-col .ant-btn:focus {
+  color: black;
+}
+.ant-btn-group > .ant-btn:first-child:not(:last-child),
+.filter-col .ant-btn-group > .ant-btn:last-child:not(:first-child) {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.filter-col .to-do-toggles.show-all .show-all-toggle {
+  background: rgba(52,152,219,0.65);
+  border: 1px solid rgb(52,152,219);
+}
+.filter-col .to-do-toggles.show-active .show-active-toggle {
+  background: rgba(46,204,113,0.65);
+  border: 1px solid rgb(46,204,113);
+}
+.filter-col .to-do-toggles.show-completed .show-completed-toggle {
+  background: rgba(231,76,60,0.65);
+  border: 1px solid rgb(231,76,60);
+}
+.filter-col .to-do-clear {
+  cursor: pointer;
+  padding: 5px 0;
+  border: 1px solid transparent;
+  transition: .5s;
+}
+.filter-col .to-do-clear:hover {
+  border-top: 1px solid silver;
+  border-bottom: 1px solid silver;
+}
+.filter-col .to-do-clear.show-clear {
+  opacity: 1;
+}
+.filter-col .to-do-clear.hide-clear {
+  opacity: 0;
+}
+
+
+
+
+
+.debug {
+  clear: both;
+  padding-top: 100px;
+}
+
+
+
+/* Hiding pieces of the list selector until it's completed */
+.list-select-col,
+.debug {
+  display: none;
+}
